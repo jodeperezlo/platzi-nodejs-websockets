@@ -1,0 +1,25 @@
+{
+	"name": "nodejs-websockets",
+	"version": "0.1.0",
+	"description": "Chat como Telegram con websockets",
+	"main": "server.js",
+	"scripts": {
+		"dev": "nodemon src/server"
+	},
+	"keywords": [
+		"chat",
+		"telegram",
+		"server",
+		"websockets",
+		"platzi"
+	],
+	"author": "Jorge de Jesús Pérez López",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.17.2",
+		"mongoose": "^6.1.5"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
+}
