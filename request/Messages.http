@@ -1,0 +1,34 @@
+// Copyright (c) 2022 Jorge de Jesus Perez Lopez
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+@api = http://localhost:3000/api/v1/messages
+
+### GET
+GET {{api}}
+
+### GET with query
+GET {{api}}?user=61d692d870ed0d90430d2d47&&chat=61d69969036dc52c9a0cb735
+
+### POST
+POST {{api}}
+Content-Type: application/json
+
+{
+	"chat": "61d69969036dc52c9a0cb735",
+	"user": "61d692d870ed0d90430d2d47",
+	"message": "Hello, how are you?"
+}
+
+### PATCH MESSAGE
+PATCH {{api}}/61d4f8bd27435350e19bb176
+Content-Type: application/json
+
+{
+	"message": "Hello World updated"
+}
+
+### DELETE MESSAGE
+DELETE {{api}}/61d695ee9e2e701e18ee12f9
+

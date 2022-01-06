@@ -1,9 +1,4 @@
 // Copyright (c) 2022 Jorge de Jesus Perez Lopez
-// 
-// This software is released under the MIT License.
-// https://opensource.org/licenses/MIT
-
-// Copyright (c) 2022 Jorge de Jesus Perez Lopez
 //
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
@@ -12,8 +7,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const messageSchema = new Schema({
+	chat: { type: Schema.Types.ObjectId, ref: 'Chats', required: true },
 	user: {
-		type: String,
+		type: Schema.ObjectId,
+		ref: 'users',
 		required: true,
 	},
 	message: {
@@ -23,6 +20,10 @@ const messageSchema = new Schema({
 	date: {
 		type: Date,
 		default: Date.now,
+	},
+	file: {
+		type: String,
+		default: '',
 	},
 });
 

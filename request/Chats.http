@@ -1,0 +1,12 @@
+@api = http://localhost:3000/api/v1/chats
+
+### GET
+GET {{api}}
+
+### POST
+POST {{api}}
+Content-Type: application/json
+
+{
+	"users": ["61d692d870ed0d90430d2d47", "61d6994c036dc52c9a0cb732"]
+}

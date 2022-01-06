@@ -1,5 +1,5 @@
 // Copyright (c) 2022 Jorge de Jesus Perez Lopez
-// 
+//
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
@@ -8,12 +8,17 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-const express = require('express');
+const config = require('../config/config');
+const messages = require('../components/messages/routes');
+const users = require('../components/users/routes');
+const chats = require('../components/chats/routes');
 
-const message = require('../components/messages/routes');
+const api = config.API_URL;
 
 const routes = (server) => {
-	server.use('/messages', message);
+	server.use(`${api}/messages`, messages);
+	server.use(`${api}/users`, users);
+	server.use(`${api}/chats`, chats);
 };
 
 module.exports = routes;
